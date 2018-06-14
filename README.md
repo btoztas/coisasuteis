@@ -3,7 +3,12 @@
 ## MySQL
 ### Criar uma nova base de dados
 1. Entrar como root na base de dados `mysql -u root`.
-2. Utilizar o comando `GRANT ALL PRIVILEGES ON <dbname>.* To '<dbuser>'@'%' IDENTIFIED BY '<dbpwd>';`.
+2. Criar uma base de dados com `CREATE DATABASE <dbname>;`.
+3. Verificar a criação da bd com`SHOW DATABASES;`.
+3. Criar um user com `CREATE USER '<dbuser>'@'%' IDENTIFIED BY '<dbpwd>';`.
+4. Verificar a criação do user `SELECT * FROM mysql.user;`.
+5. Dar privilégios ao user na db com `GRANT ALL PRIVILEGES ON <dbname> . * TO '<dbuser>'@'%';`.
+6. Atualizar políticas com `FLUSH PRIVILEGES;`.
 
 ## MongoDB
 ### Criar uma nova base de dados
