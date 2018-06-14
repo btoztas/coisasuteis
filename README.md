@@ -15,7 +15,7 @@
 ### Adicionar um novo web server a apontar para um .wsgi Flask
 
 1. Criar um ficheiro em `/etc/apache2/sites-available/<site>.conf`, com o conteúdo (de seguida um exemplo de Flask):
-``
+```
 <VirtualHost *:81>
     ServerName wheremi
 
@@ -27,15 +27,15 @@
         Require all granted
     </Directory>
 </VirtualHost>
-``
+```
 
 2. Criar um .wsgi com o conteúdo (de seguida um exemplo de Flask):
-``
+```
 import sys
 sys.path.insert(0, '/path/to/the/application')
 
 from wheremi import app as application
-``
+```
 3. Verificar de em `vim /etc/apache2/ports.conf` a porta escolhida para o webserver está marcada como Listen, se não adicionar `Listen <port>` ao ficheiro.
 
 4. Para ativar o site utilizar o comando `a2ensite <sitename>` e fazer reload ao apache com `systemctl reload apache2`.
