@@ -1,7 +1,7 @@
 # Coisas Úteis
 
 ## MySQL
-### Criar uma nova base de dados
+### Criar uma nova base de dados e respetivo utilizador
 1. Entrar como root na base de dados `mysql -u root`.
 2. Criar uma base de dados com `CREATE DATABASE <dbname>;`.
 3. Verificar a criação da bd com`SHOW DATABASES;`.
