@@ -31,10 +31,10 @@
 
 2. Criar um .wsgi com o conteúdo (de seguida um exemplo de Flask):
 ```
-import sys
-sys.path.insert(0, '/path/to/the/application')
+activate_this = '/home/administrator/projects/stacker/env/bin/activate_this.py'
+execfile(activate_this, dict(__file__=activate_this))
 
-from wheremi import app as application
+from stacker_app import app as application
 ```
 3. Verificar de em `vim /etc/apache2/ports.conf` a porta escolhida para o webserver está marcada como Listen, se não adicionar `Listen <port>` ao ficheiro.
 
